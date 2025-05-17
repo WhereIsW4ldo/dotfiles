@@ -1,7 +1,7 @@
 return {
   'stevearc/conform.nvim',
   name = 'conform',
-  config = function(_, opts)
+  config = function()
     formatters_by_ft = {
       lua = { 'stylua' },
       python = { 'prettier' },

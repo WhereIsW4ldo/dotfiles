@@ -1,7 +1,7 @@
 return {
   'catppuccin/nvim', 
   name = 'catppuccin',
-  config = function(_, opts)
+  config = function()
     vim.cmd.colorscheme 'catppuccin'
   end
 }
