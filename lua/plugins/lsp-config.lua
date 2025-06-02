@@ -11,6 +11,8 @@ return {
       require('mason-lspconfig').setup({
         ensure_installed = {
           'lua_ls',
+          'ts_ls',
+          'svelte'
         }
       })
     end
@@ -19,7 +21,11 @@ return {
     'neovim/nvim-lspconfig',
     config = function()
       local lspconfig = require('lspconfig')
+
       lspconfig.lua_ls.setup({})
+      lspconfig.ts_ls.setup({})
+      lspconfig.svelte.setup({})
+
       vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
