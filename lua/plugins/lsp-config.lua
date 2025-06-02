@@ -12,7 +12,9 @@ return {
         ensure_installed = {
           'lua_ls',
           'ts_ls',
-          'svelte'
+          'svelte',
+          'csharp_ls',
+          'jsonls'
         }
       })
     end
@@ -25,6 +27,8 @@ return {
       lspconfig.lua_ls.setup({})
       lspconfig.ts_ls.setup({})
       lspconfig.svelte.setup({})
+      lspconfig.csharp_ls.setup({})
+      lspconfig.jsonls.setup({})
 
       vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
