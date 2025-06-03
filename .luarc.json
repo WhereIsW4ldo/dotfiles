@@ -1,5 +1,10 @@
 {
     "diagnostics.globals": [
-        "vim"
+        "vim",
+        "formatters_by_ft",
+        "format_on_save",
+        "ensure_installed",
+        "highlight",
+        "indent"
     ]
 }

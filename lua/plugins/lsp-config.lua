@@ -33,7 +33,10 @@ return {
       vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-      vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+      vim.keymap.set('n', 'gu', vim.lsp.buf.references, {})
+      vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
+
+      vim.keymap.set('n', '<C-R>', vim.lsp.buf.rename, {})
     end
   }
 }
