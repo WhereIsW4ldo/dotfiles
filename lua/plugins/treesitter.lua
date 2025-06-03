@@ -1,22 +1,16 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	name = "treesitter",
-	build = ":TSUpdate",
-	config = function()
-		ensure_installed = {
-			"lua",
-			"javascript",
-			"svelte",
-			"html",
-			"css",
-			"rust",
-			"C#",
-			"terraform",
-			"hcl",
-		}
-		highlight = { enable = true }
-		indent = { enable = true }
+  "nvim-treesitter/nvim-treesitter",
+  name = "treesitter",
+  build = ":TSUpdate",
+  config = function()
+    local config = require("nvim-treesitter.configs")
 
-		vim.treesitter.language.register("terraform", { "terraform", "terraform-vars" })
-	end,
+    config.setup({
+      auto_install = true,
+      highlight = { enable = true },
+      indent = { enable = true },
+    })
+
+    vim.treesitter.language.register("terraform", { "terraform", "terraform-vars" })
+  end,
 }
