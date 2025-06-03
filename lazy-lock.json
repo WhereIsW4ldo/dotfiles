@@ -1,4 +1,5 @@
 {
+  "alpha-nvim": { "branch": "main", "commit": "a35468cd72645dbd52c0624ceead5f301c566dff" },
   "blink.cmp": { "branch": "main", "commit": "4e49a73f8820dd9fad36769f3b18f9c4d44deeca" },
   "catppuccin": { "branch": "main", "commit": "a0c769bc7cd04bbbf258b3d5f01e2bdce744108d" },
   "conform": { "branch": "master", "commit": "6feb2f28f9a9385e401857b21eeac3c1b66dd628" },
