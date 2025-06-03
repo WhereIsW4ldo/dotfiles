@@ -1,18 +1,22 @@
 return {
-  'nvim-treesitter/nvim-treesitter', 
+  'nvim-treesitter/nvim-treesitter',
   name = 'treesitter',
   build = ':TSUpdate',
   config = function()
     ensure_installed = {
-      'lua', 
-      'javascript', 
+      'lua',
+      'javascript',
       'svelte',
-      'html', 
-      'css', 
+      'html',
+      'css',
       'rust',
-      'C#'
+      'C#',
+      'terraform',
+      'hcl'
     }
     highlight = { enable = true }
     indent = { enable = true }
+
+    vim.treesitter.language.register('terraform', { 'terraform', 'terraform-vars' })
   end
 }

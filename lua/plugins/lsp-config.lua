@@ -14,7 +14,7 @@ return {
           'ts_ls',
           'svelte',
           'csharp_ls',
-          'jsonls'
+          'jsonls',
         }
       })
     end
