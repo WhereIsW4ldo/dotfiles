@@ -5,11 +5,11 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set cursorline")
 
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+vim.keymap.set("t", "<C-space>", "<C-\\><C-n><C-w>k", { silent = true })
 
 vim.g.mapleader = " "
 
 vim.opt.swapfile = false
-
 
 require("config.lazy")
