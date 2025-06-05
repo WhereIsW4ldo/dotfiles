@@ -2,7 +2,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     name = "telescope",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim", "cljoly/telescope-repo.nvim" },
     config = function()
       require("telescope").setup({
         extensions = {
@@ -13,6 +13,8 @@ return {
       })
 
       require("telescope").load_extension("ui-select")
+      require("telescope").load_extension("repo")
+
       local builtin = require("telescope.builtin")
 
       vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })

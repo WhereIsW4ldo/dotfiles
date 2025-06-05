@@ -7,6 +7,7 @@ vim.cmd("set cursorline")
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("t", "<C-space>", "<C-\\><C-n><C-w>k", { silent = true })
+vim.keymap.set("i", "jj", "<Esc>", { noremap = false })
 
 vim.g.mapleader = " "
 
