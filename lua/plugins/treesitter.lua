@@ -3,7 +3,6 @@ return {
   name = "treesitter",
   build = ":TSUpdate",
   config = function()
-    -- Point treesitter to the correct gcc path
     require 'nvim-treesitter.install'.compilers = { "zig" }
 
     local config = require("nvim-treesitter.configs")
