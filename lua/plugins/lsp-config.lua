@@ -18,6 +18,16 @@ return {
     lazy = false,
     config = function()
       require("mason-lspconfig").setup({
+        ensure_installed = {
+          "lua_ls",
+          "csharp_ls",
+          "jsonls",
+          "pylsp",
+          "rust_analyzer",
+          "svelte",
+          "ts_ls",
+          "terraformls",
+        },
         auto_install = true,
       })
     end,
@@ -25,26 +35,18 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})
+      vim.keymap.set("n", "K", function()
+        vim.lsp.buf.hover({
+          border = "rounded",
+          max_width = 80,
+          max_height = 30,
+        })
+      end, {})
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-
-      local telescopeBuiltins = require("telescope.builtin")
-
-      vim.keymap.set("n", "<leader>fr", telescopeBuiltins.lsp_references, { desc = "Telescope find references" })
-      vim.keymap.set(
-        "n",
-        "<leader>fi",
-        telescopeBuiltins.lsp_implementations,
-        { desc = "Telescope find implementations" }
-      )
-      vim.keymap.set(
-        "n",
-        "<leader>fd",
-        telescopeBuiltins.lsp_definitions,
-        { desc = "Telescope find definitions" }
-      )
-
-      vim.keymap.set("n", "<C-R>", vim.lsp.buf.rename, {})
+      vim.keymap.set({ "n" }, "<leader>fr", vim.lsp.buf.references, {})
+      vim.keymap.set({ "n" }, "<leader>fi", vim.lsp.buf.implementation, {})
+      vim.keymap.set({ "n" }, "<leader>fd", vim.lsp.buf.definition, {})
+      vim.keymap.set({ "n" }, "<leader>rr", vim.lsp.buf.rename, {})
     end,
   },
 }
