@@ -22,7 +22,7 @@ return {
           "lua_ls",
           "csharp_ls",
           "jsonls",
-          "pylsp",
+          -- "pylsp",
           "rust_analyzer",
           "svelte",
           "ts_ls",

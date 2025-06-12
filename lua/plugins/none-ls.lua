@@ -17,7 +17,7 @@ return {
 
           require("none-ls.diagnostics.eslint_d"),
           null_ls.builtins.diagnostics.mypy,
-          null_ls.builtins.diagnostics.terraform_validate,
+          -- null_ls.builtins.diagnostics.terraform_validate,
           null_ls.builtins.diagnostics.todo_comments,
 
           null_ls.builtins.code_actions.refactoring,
