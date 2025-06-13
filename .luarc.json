@@ -6,6 +6,7 @@
         "ensure_installed",
         "highlight",
         "indent",
-        "opts"
+        "opts",
+        "Snacks"
     ]
 }

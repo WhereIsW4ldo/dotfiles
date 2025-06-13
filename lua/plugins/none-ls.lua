@@ -4,6 +4,11 @@ return {
     dependencies = {
       "nvimtools/none-ls-extras.nvim",
       "ThePrimeagen/refactoring.nvim",
+      "JohnnyMorganz/StyLua",
+      "fsouza/prettierd",
+      "belav/csharpier",
+      "mantoni/eslint_d.js",
+      "python/mypy",
     },
     config = function()
       local null_ls = require("null-ls")
