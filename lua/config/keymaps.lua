@@ -1,5 +1,5 @@
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
-vim.keymap.set("t", "<C-space>", "<C-\\><C-n><C-w>k", { silent = true })
+vim.keymap.set("t", "<leader><Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.keymap.set("i", "jj", "<Esc>", { noremap = false })
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })

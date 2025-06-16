@@ -43,9 +43,6 @@ return {
         })
       end, {})
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-      vim.keymap.set({ "n" }, "<leader>fr", vim.lsp.buf.references, {})
-      vim.keymap.set({ "n" }, "<leader>fi", vim.lsp.buf.implementation, {})
-      vim.keymap.set({ "n" }, "<leader>fd", vim.lsp.buf.definition, {})
       vim.keymap.set({ "n" }, "<leader>rr", vim.lsp.buf.rename, {})
     end,
   },
