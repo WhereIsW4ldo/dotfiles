@@ -1,5 +1,5 @@
 return {
-  'folke/snacks.nvim',
+  "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
   opts = {
@@ -11,9 +11,18 @@ return {
     scope = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
-    terminal = { enabled = true },
+    terminal = {
+      enabled = true,
+      shell = "cmd",
+    },
   },
   keys = {
-    { "", function() require('snacks').terminal() end, desc = "Toggle Terminal" }
+    {
+      "",
+      function()
+        require("snacks").terminal()
+      end,
+      desc = "Toggle Terminal",
+    },
   },
 }
