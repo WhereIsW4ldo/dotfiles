@@ -1,5 +1,6 @@
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("t", "<leader><Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+vim.keymap.set("t", "", function() require('snacks').terminal() end, { desc = "Toggle Terminal" });
 vim.keymap.set("i", "jj", "<Esc>", { noremap = false })
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })

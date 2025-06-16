@@ -14,6 +14,6 @@ return {
     terminal = { enabled = true },
   },
   keys = {
-    { "<leader>/", function() require('snacks').terminal() end, desc = "Toggle Terminal" }
+    { "", function() require('snacks').terminal() end, desc = "Toggle Terminal" }
   },
 }
