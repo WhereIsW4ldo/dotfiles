@@ -9,7 +9,13 @@ return {
     },
     config = function()
       local CallTelescope = function(input)
-        local theme = require("telescope.themes").get_dropdown({})
+        local theme = require("telescope.themes").get_dropdown({
+          path_display = {
+            filename_first = {
+              reverse_directories = false,
+            },
+          },
+        })
         input(theme)
       end
 

@@ -24,6 +24,7 @@ return {
           diagnostics.todo_comments,
 
           code_actions.refactoring,
+          require("none-ls.code_actions.eslint_d"),
         },
       })
 
