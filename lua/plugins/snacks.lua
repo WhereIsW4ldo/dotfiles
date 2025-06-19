@@ -13,7 +13,6 @@ return {
     words = { enabled = true },
     terminal = {
       enabled = true,
-      shell = "cmd",
     },
   },
   keys = {
