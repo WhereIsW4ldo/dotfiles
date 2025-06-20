@@ -21,7 +21,7 @@ vim.keymap.set("v", ">", ">gv")
 -- Terminal keymaps
 vim.keymap.set("t", "<leader><Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.keymap.set("t", "", function()
-  require("snacks").terminal()
+	require("snacks").terminal()
 end, { desc = "Togglet Terminal" })
 
 vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h", { desc = "Exit terminal and go to Left Window", remap = true })
