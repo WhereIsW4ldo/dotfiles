@@ -4,14 +4,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
 	group = autoformatting_group,
 	callback = function(args)
-		require("conform").format({ bufnr = args.buf, async = true })
-	end,
-})
-
-vim.api.nvim_create_autocmd("LspNotify", {
-	callback = function(args)
-		if args.data.method == "textDocument/didOpen" then
-			vim.lsp.foldclose("imports", vim.fn.bufwinid(args.buf))
-		end
+		require("conform").format({ bufnr = args.buf })
 	end,
 })

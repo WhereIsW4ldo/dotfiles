@@ -11,16 +11,15 @@ return {
 				python = { "prettierd" },
 				rust = { "rustfmt", lsp_format = "fallback" },
 				javascript = { "eslint_d", "prettierd" },
+				javascriptreact = { "eslint_d", "prettierd" },
 				typescript = { "eslint_d", "prettierd" },
+				typescriptreact = { "eslint_d", "prettierd" },
 				terraform = { "terraform_fmt" },
 				markdown = { "prettierd" },
 				svelte = { "eslint_d" },
+				json = { "prettierd" },
 				["*"] = { "codespell" },
 			},
-			default_format_opts = {
-				lsp_format = "fallback",
-			},
-			format_on_save = { timeout_ms = 500 },
 		})
 	end,
 }

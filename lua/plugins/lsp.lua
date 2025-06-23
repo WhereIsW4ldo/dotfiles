@@ -36,11 +36,9 @@ return {
 					"rustfmt",
 					"eslint_d",
 					"terraform",
-					"codespell",
 
 					-- linters
 					"eslint_d",
-					"pylint",
 					"selene",
 					"tflint",
 				},
