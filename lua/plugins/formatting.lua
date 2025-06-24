@@ -15,6 +15,7 @@ return {
 				typescript = { "eslint_d", "prettierd" },
 				typescriptreact = { "eslint_d", "prettierd" },
 				terraform = { "terraform_fmt" },
+				["terraform-vars"] = { "terraform_fmt" },
 				markdown = { "prettierd" },
 				svelte = { "eslint_d" },
 				json = { "prettierd" },
