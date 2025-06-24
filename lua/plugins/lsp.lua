@@ -24,7 +24,7 @@ return {
 					"jsonls",
 					"rust_analyzer",
 					"svelte",
-					"ts_ls",
+					-- "ts_ls",
 					"terraformls",
 					"html",
 					"cssls",
@@ -34,11 +34,11 @@ return {
 					"stylua",
 					"prettierd",
 					"rustfmt",
-					"eslint_d",
+					-- "eslint_d",
 					"terraform",
 
 					-- linters
-					"eslint_d",
+					-- "eslint_d",
 					"selene",
 					"tflint",
 				},
@@ -70,5 +70,10 @@ return {
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 			vim.keymap.set({ "n" }, "<leader>rr", vim.lsp.buf.rename, {})
 		end,
+	},
+	{
+		"pmizio/typescript-tools.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		opts = {},
 	},
 }
