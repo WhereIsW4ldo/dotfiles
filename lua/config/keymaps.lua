@@ -28,3 +28,14 @@ vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h", { desc = "Exit terminal and go
 vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j", { desc = "Exit terminal and go to Lower Window", remap = true })
 vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k", { desc = "Exit terminal and go to Upper Window", remap = true })
 vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l", { desc = "Exit terminal and go to Right Window", remap = true })
+
+-- Lsp keymaps
+vim.keymap.set("n", "K", function()
+vim.lsp.buf.hover({
+  border = "rounded",
+  max_width = 80,
+  max_height = 30,
+})
+end, {})
+vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+vim.keymap.set({ "n" }, "<leader>rr", vim.lsp.buf.rename, {})

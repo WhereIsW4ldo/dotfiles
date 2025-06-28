@@ -33,6 +33,10 @@ return {
         },
         default_component_configs = {
           filesystem = {
+            filtered_items = {
+                hide_dotfiles = false,
+                hide_by_name = "node_modules",
+            },
             follow_current_file = {
               enabled = true,
               leave_dirs_open = true,
@@ -55,7 +59,6 @@ return {
       })
 
       vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left toggle<CR>", {})
-      vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float <CR>", {})
       vim.keymap.set("n", "<leader>sc", ":Neotree show reveal<CR>", {})
     end,
   },

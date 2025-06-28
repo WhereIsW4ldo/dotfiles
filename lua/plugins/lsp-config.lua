@@ -16,8 +16,7 @@ return {
   {
     "mason-org/mason-lspconfig.nvim",
     lazy = false,
-    config = function()
-      require("mason-lspconfig").setup({
+    opts = {
         ensure_installed = {
           "lua_ls",
           "csharp_ls",
@@ -29,21 +28,54 @@ return {
           "terraformls",
         },
         auto_install = true,
-      })
-    end,
+    },
   },
   {
     "neovim/nvim-lspconfig",
-    config = function()
-      vim.keymap.set("n", "K", function()
-        vim.lsp.buf.hover({
-          border = "rounded",
-          max_width = 80,
-          max_height = 30,
-        })
-      end, {})
-      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-      vim.keymap.set({ "n" }, "<leader>rr", vim.lsp.buf.rename, {})
-    end,
   },
+    {
+        'kosayoda/nvim-lightbulb',
+        opts = {
+            autocmd = { enabled = true }
+        }
+    },
+    {
+        'onsails/lspkind.nvim',
+    },
+    {
+        'ray-x/lsp_signature.nvim',
+        opts = {
+            bind = true,
+            handler_opts = {
+                border = "rounded"
+            }
+        }
+    },
+    {
+        'smjonas/inc-rename.nvim',
+    },
+    {
+        'jubnzv/virtual-types.nvim',
+    },
+    {
+        'aznhe21/actions-preview.nvim',
+    },
+    {
+        'VidocqH/lsp-lens.nvim',
+    },
+    {
+        'hinell/lsp-timeout.nvim',
+        dependencies = { 'neovim/nvim-lspconfig' }
+    },
+    {
+        'esmuellert/nvim-eslint'
+    },
+    {
+        'sontungexpt/better-diagnostic-virtual-text',
+        event = 'LspAttach',
+        config = function(opts)
+            require('better-diagnostic-virtual-text').setup(opts)
+        end
+    },
+
 }
