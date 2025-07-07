@@ -34,11 +34,11 @@ return {
 					"stylua",
 					"prettierd",
 					"rustfmt",
-					-- "eslint_d",
+					"eslint_d",
 					"terraform",
 
 					-- linters
-					-- "eslint_d",
+					"eslint_d",
 					"selene",
 					"tflint",
 				},

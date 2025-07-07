@@ -10,8 +10,6 @@ return {
 				lua = { "stylua" },
 				python = { "prettierd" },
 				rust = { "rustfmt", lsp_format = "fallback" },
-				javascript = { "eslint_d", "prettierd" },
-				javascriptreact = { "eslint_d", "prettierd" },
 				typescript = { "eslint_d", "prettierd" },
 				typescriptreact = { "eslint_d", "prettierd" },
 				terraform = { "terraform_fmt" },

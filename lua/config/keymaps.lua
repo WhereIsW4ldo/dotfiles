@@ -20,7 +20,7 @@ vim.keymap.set("v", ">", ">gv")
 
 -- Terminal keymaps
 vim.keymap.set("t", "<leader><Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
-vim.keymap.set("t", "", function()
+vim.keymap.set("t", "<C-/>", function()
 	require("snacks").terminal()
 end, { desc = "Togglet Terminal" })
 
